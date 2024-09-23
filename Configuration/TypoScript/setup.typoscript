@@ -1,0 +1,48 @@
+page = PAGE
+page {
+  typeNum = 0
+
+  includeCSSLibs {
+
+  }
+
+  includeCSS {
+
+  }
+
+  includeJSFooterlibs {
+
+  }
+
+  includeJSFooter {
+
+  }
+
+  includeJSLibs {
+
+  }
+
+  includeJS {
+
+  }
+
+  config {
+    compressCss = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+
+    additionalHeaders {
+      # browser is informed about an encrypted connection
+      10.header = strict-transport-security:max-age=31536000
+      # Integration is only permitted from your own domain
+      20.header = X-Frame-Options:SAMEORIGIN
+      # Reflective XSS attacks are blocked
+      30.header = X-Xss-Protection: 1; mode=block
+      # prevents the browser from misinterpreting and executing the content of files(XXS-Attacks).
+      40.header = X-Content-Type-Options: nosniff
+      #The referrer is generated for links within a website, but not extern.
+      50.header = Referrer-Policy:strict-origin
+    }
+  }
+}
