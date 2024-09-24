@@ -31,6 +31,9 @@ page {
     compressJs = 0
     concatenateCss = 0
     concatenateJs = 0
+    # in developer mode to get better information about bugs
+    contentObjectExceptionHandler = 0
+    no_cache = 1
 
     additionalHeaders {
       # browser is informed about an encrypted connection
@@ -44,5 +47,35 @@ page {
       #The referrer is generated for links within a website, but not extern.
       50.header = Referrer-Policy:strict-origin
     }
+
   }
+  # website icon
+  shortcutIcon =  EXT:siva_sitepackage/Resources/Public/favicon.ico
+
+  # needed Meta tag can be edited here
+  meta {
+    viewport = width=device-width, initial-scale=1
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible.httpEquivalent = 1
+  }
+
+  10 = FLUIDTEMPLATE
+  10 {
+    templateName = Default
+
+    templateRootPaths {
+        0 = EXT:siva_sitpackage/Resources/Private/Templates/Page/
+    }
+
+    partialRootPaths {
+        0 = EXT:siva_sitpackage/Resources/Private/Partials/Page/
+    }
+
+    layoutRootPaths {
+        0 = EXT:siva_sitpackage/Resources/Private/Layouts/Page/
+    }
+  }
+
+
+
 }
