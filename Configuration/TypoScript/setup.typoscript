@@ -73,19 +73,27 @@ page {
       templateName = Default
 
       templateRootPaths {
-          0 = EXT:siva_sitepackage/Resources/Private/Templates/Page/
+        0 = EXT:siva_sitepackage/Resources/Private/Templates/Page/
       }
 
       partialRootPaths {
-          0 = EXT:siva_sitepackage/Resources/Private/Partials/Page/
+        0 = EXT:siva_sitepackage/Resources/Private/Partials/Page/
       }
 
       layoutRootPaths {
-          0 = EXT:siva_sitepackage/Resources/Private/Layouts/Page/
+        0 = EXT:siva_sitepackage/Resources/Private/Layouts/Page/
       }
 
       dataProcessing {
-
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+          # if navtitle is available, otherwise use it for the page title
+          titleField = nav_title // title
+          includeSpacer = 0
+          expandAll = 1
+          levels = 2
+          as = mainNav
+        }
       }
 
       settings {
