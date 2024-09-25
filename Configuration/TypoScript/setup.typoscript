@@ -87,7 +87,7 @@ page {
       dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         10 {
-          # if navtitle is available, otherwise use it for the page title
+          # if navtitle is available, otherwise use the page title
           titleField = nav_title // title
           includeSpacer = 0
           expandAll = 1
@@ -97,7 +97,10 @@ page {
       }
 
       settings {
-
+         dfooter{
+                # Page Id of the Footer
+                uid = 5
+            }
       }
 
       variables {
@@ -105,6 +108,27 @@ page {
       }
   }
 
+}
 
+### FOOTER ###
+lib.siva-sitepackage.renderContentElements = CONTENT
+lib.siva-sitepackage.renderContentElements {
+    table = tt_content
+    select {
+        pidInList = TEXT
+        pidInList {
+            field = pageId
+            ifEmpty = this
+        }
+        where = {#colPos}= 10
+        where {
+            data = field:colPos
+            intval = 1
+            wrap = {#colPos}=|
+        }
+        orderBy = sorting
+    }
 
+    #renderobject gets a reference to tt_content
+    renderObj = < tt_content
 }
