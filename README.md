@@ -12,7 +12,9 @@ first step in root Directory -> composer.json add in first bracket, 	"repositori
 	],
   otherwise, ddev composer won´t find the Extension.
 
-	A basic footer is created in the daynamicFooter.TsConfig where you can also redesign the footer. 
+	A simple footer is created in the daynamicFooter.TsConfig file, 
+	which can be restructured as desired. 
+	The MainFooter.html must then be adapted.
 
 	Then, create a page in the backend of the Typo3 site and set the backend layout to dynamic-footer under the Appearance menu tab.
   
