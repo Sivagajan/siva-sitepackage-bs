@@ -120,7 +120,6 @@ lib.siva-sitepackage.renderContentElements {
             field = pageId
             ifEmpty = this
         }
-        where = {#colPos}= 10
         where {
             data = field:colPos
             intval = 1
