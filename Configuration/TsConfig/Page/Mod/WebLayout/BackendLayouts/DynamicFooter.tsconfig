@@ -1,0 +1,56 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      dynamicFooter {
+        title = dynamic-footer
+        icon = content-container-columns-2
+        config {
+          backend_layout {
+            colCount = 4
+            rowCount = 3
+            rows {
+              1 {
+                columns {
+                    1 {
+                        name = Logo Row
+                        colspan = 4
+                        colPos = 10
+                    }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                      name = First Column
+                      colPos = 21
+                  }
+                  2 {
+                      name = Second Column
+                      colPos = 22
+                  }
+                  3 {
+                      name = Third Column
+                      colPos = 23
+                  }
+                  4 {
+                      name = Fourth Column
+                      colPos = 24
+                  }
+                }
+              }
+              3 {
+                columns {
+                  1 {
+                    name = Copyright
+                    colspan = 4
+                    colPos = 30
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
