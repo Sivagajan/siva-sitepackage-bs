@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+@import "EXT:siva_sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/DynamicFooter.tsconfig"
