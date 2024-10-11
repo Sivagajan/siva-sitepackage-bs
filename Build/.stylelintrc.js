@@ -2,6 +2,8 @@ module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-recommended-scss'],
   customSyntax: 'postcss-scss',
   rules: {
+     // if more rules needed, check this site https://stylelint.io/user-guide/rules
+
       indentation: 'tab', // Use tabs for indentation
       'alpha-value-notation': null, // Allow any notation for alpha values
       'value-keyword-case': null, // Allow any case for property values (e.g., uppercase, lowercase)

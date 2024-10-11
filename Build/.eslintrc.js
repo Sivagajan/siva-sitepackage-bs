@@ -24,6 +24,7 @@ module.exports = {
   },
   'rules': {
      // Individual rules can be added or customised here
+     // if more rules needed, check this site https://eslint.org/docs/latest/rules
     'indent': ['error', 2], // Example: Use 2 space indentation
     'quotes': ['error', 'single'], // Example: Use single inverted commas
     'semi': ['error', 'always'], // Example: Always use a semicolon at the end
