@@ -4,10 +4,10 @@
   "description": "Buildprocess for Siva Sitepackage",
   "main": "index.js",
   "scripts": {
-    "bootstrap:css": "sass --quiet --quiet-deps --style=expanded --source-map ./SCSS/bootstrap/bootstrap-custom.scss ../Resources/Public/Css/styles.css",
-    "minify:bootstrap": "postcss ../Resources/Public/Css/styles.css -o ../Resources/Public/Css/styles.min.css --map --use cssnano",
+    "bootstrap:css": "sass --quiet --quiet-deps --style=expanded --source-map ./SCSS/Bootstrap/Custom.scss ../Resources/Public/CSS/styles.css",
+    "minify:bootstrap": "postcss ../Resources/Public/CSS/styles.css -o ../Resources/Public/CSS/styles.min.css --map --use cssnano",
     "build:css": "npm run bootstrap:css && npm run minify:bootstrap",
-    "lint:css": "npx stylelint --fix ./SCSS/bootstrap/custom/*.scss",
+    "lint:css": "npx stylelint --fix ./SCSS/Bootstrap/Custom/*.scss",
     "build:js": "webpack --mode=production",
     "js:watch": "webpack --watch",
     "lint:js": "eslint ./JS/*.js --fix"
